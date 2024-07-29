@@ -1,0 +1,96 @@
+@font-face {
+  font-family: Inconsolata;
+  src: url("Inconsolata.ttf");
+}
+@font-face {
+  font-family: Rubik;
+  src: url("Rubik.ttf");
+}
+html {
+  height: 100%;
+}
+html body {
+  background: #f2f2ff;
+  height: 100%;
+  margin: 0;
+  color: #202428;
+  font-family: Rubik;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 80px auto 120px;
+}
+html body :not(script) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body header, html body footer {
+  background-color: #202428;
+  font-family: Inconsolata;
+  padding: 0;
+}
+html body header a, html body footer a {
+  text-decoration: none;
+  color: #f2f2ff;
+  fill: #f2f2ff;
+}
+html body header a:hover, html body footer a:hover {
+  color: #3385ff;
+  fill: #3385ff;
+}
+html body header #title, html body footer #title {
+  font-size: 28px;
+}
+html body header {
+  grid-area: header;
+}
+html body header .container {
+  width: 70vw;
+  justify-content: left;
+}
+html body main {
+  grid-area: main;
+  margin: 75px 0;
+}
+html body main .container {
+  display: grid;
+  grid-template-areas: "about";
+  align-items: center;
+  justify-items: center;
+  max-width: 75vw;
+}
+html body main .container #about {
+  grid-area: about;
+  flex-direction: column;
+}
+html body main .container #about h1, html body main .container #about h2 {
+  margin-top: 0;
+}
+html body main .container #about h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+html body main .container #about h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+html body main .container #about p {
+  margin: 0;
+  font-size: 18px;
+}
+html body footer {
+  grid-area: footer;
+  font-size: 14px;
+}
+html body footer .links {
+  flex-direction: column;
+}
+html body footer .links svg {
+  width: 50px;
+}
+html body footer .links a {
+  height: 40px;
+}
+html body #print {
+  display: none !important;
+}/*# sourceMappingURL=styles.css.map */
